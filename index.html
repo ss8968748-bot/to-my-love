@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Ananda ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="music-controls">
+        <button onclick="playMusic()">Play 🎵</button>
+        <button onclick="pauseMusic()">Pause 🔇</button>
+    </div>
+    <audio id="bgMusic" loop src="your-song.mp3"></audio>
+
+    <div class="main-container">
+        <div id="screen1" class="glass-card">
+            <img src="prank.gif" class="big-gif">
+            <h1 class="pink-text">Will you be my Valentine? ❤️</h1>
+            <div class="btn-row">
+                <button class="yes-btn" onclick="showNextScreen()">Yes!</button>
+                <button id="noBtn" class="no-btn" onmouseover="moveNo()">No</button>
+            </div>
+        </div>
+
+        <div id="screen2" class="glass-card hidden">
+            <img src="success.gif" class="big-gif">
+            <h1 class="pink-text">Advance Happy Valentine's Day! 🥰</h1>
+            <button class="yes-btn" onclick="showGiftMenu()">Open My Gifts 🎁</button>
+        </div>
+
+        <div id="screen3" class="gift-container hidden">
+            <h2 class="pink-text title-top">For My Favorite Person</h2>
+            
+            <div class="folder-row">
+                <div class="folder-box" onclick="startQuiz()">
+                    <span>📁</span><br>Gift 1
+                </div>
+                <div class="folder-box" onclick="showLetter()">
+                    <span>📁</span><br>Gift 2
+                </div>
+                <div class="folder-box" onclick="showMemories()">
+                    <span>📁</span><br>Gift 3
+                </div>
+            </div>
+
+            <hr class="dotted-line">
+
+            <div id="contentArea" class="content-white-box">
+                <p class="placeholder-text">Click a gift above to see the surprise!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
